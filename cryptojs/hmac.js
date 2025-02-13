@@ -16,7 +16,6 @@ module.exports = function (RED) {
 			// check configurations
 			if(!algorithm || !key) {
 				// rising misconfiguration error
-				//node.error("Missing configuration, please check your algorithm or key.", msg);
 				
 				node.error("Missing configuration, please check your algorithm, secret key, mode or padding.", msg);
 				

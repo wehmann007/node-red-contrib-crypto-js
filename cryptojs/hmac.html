@@ -3,7 +3,7 @@
 		category: 'function',
 		color: '#a6bbcf',
 		defaults: {
-			name: {value: ''}, algorithm: {value: '', required: true}, key: {value: '', required: true}
+			name: {value: ''}, algorithm: {value: '', required: false}, key: {value: '', required: false}
 		},
 		inputs: 1,
 		outputs: 1,
@@ -40,4 +40,13 @@
 
 <script type="text/x-red" data-help-name="hmac">
     <p>Create a keyed-hash message (HMAC) of payload using the specified algorithm.</p>
+	<p><strong>Input</strong></p>
+    <p>You can set values dynamically by using:<br/>
+        <code>msg.algorithm</code> Algorithm<br/>
+        <code>msg.key</code> Secret Key<br/>
+    </p>
+    <p><strong>Output</strong></p>
+    <p>
+        <code>msg.payload</code>  keyed-hash message (HMAC) output converted to string.
+    </p>
 </script>
